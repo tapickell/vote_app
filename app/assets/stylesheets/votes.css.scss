@@ -1,0 +1,77 @@
+// Place all the styles related to the Votes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "border_radius";
+
+$ever_green: #A8C545;
+$coffee: #776045;
+$with_cream: #DFD3B6;
+$blues: #0092B2;
+
+.center_me {
+  text-align: center;
+}
+
+.darken {
+  background-color: $with_cream;
+}
+
+.highlight {
+  background-color: $coffee;
+  border-style: solid;
+  border-width: 2px;
+  border-color: $blues;
+}
+
+.blue_text {
+  color: $blues;
+}
+
+.coffee_text {
+  font-size: 1.5em;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.other_circle {
+  border-radius: 1em;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 2em;
+  margin-right: 5px;
+  text-align: center;
+  width: 2em;
+  font-size: 4em;
+  color: white;
+}
+
+.green_text {
+  color: $ever_green;
+}
+
+.brown_text {
+  color: $coffee;
+}
+
+.round_box {
+  transition: all 1s;
+  @include border-radius(10px);
+}
+
+.gray_back {
+  background-color: lightgray;
+}
+
+.blue_back {
+  background-color: blue;
+}
+
+.green_back {
+ background-color: $ever_green;
+}

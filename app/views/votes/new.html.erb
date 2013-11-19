@@ -1,0 +1,22 @@
+<%- if notice %>
+  <div class="alert-box"><%= notice %></div>
+<% end %>
+<div class="row center_me">
+  <div class="large-10 large-offset-1">
+    <h1 class="header brown_text">Espresso Showdown</h1>
+    <h3 class="subheader">The Giddy Goat Coffeehouse</h3>
+  </div>
+</div>
+<div class="row">
+  <div class="large-12 center_me">
+    <p><strong>Please Note:</strong> We are keeping both espresso blends but we value your opinion on which you like best.</p>
+  </div>
+  <div class="round_box gray_back">
+    <div class="center_me">
+      <h2><small>Let us know which espresso blend you like the best.</small></h2>
+    </div>
+    <%= render 'form' %>
+  </div>
+  <div class="row">
+  </div>
+</div>

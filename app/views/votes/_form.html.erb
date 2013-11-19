@@ -1,0 +1,52 @@
+<%= form_for(@vote) do |f| %>
+  <% if @vote.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@vote.errors.count, "error") %> prohibited this vote from being saved:</h2>
+      <ul>
+        <% @vote.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field row">
+    <div class="large-4 large-offset-4">
+      <%= f.text_field :email, placeholder: "Email Address", required: :true %>
+    </div>
+    <div class="actions row">
+      <div class="large-2 large-offset-5">
+        <%= f.submit "Cast Your Vote", :class => "button radius" %>
+      </div>
+    </div>
+  </div>
+  <div class="field row selection">
+    <div class="large-10 large-offset-1">
+      <div class="large-5 columns">
+        <label class="panel round_box darken">
+          <div class="center_me">
+            <div class="other_circle green_back">
+              <%= @rock %>
+            </div>
+            <div class="coffee_text brown_text">
+              Rock-a-Billy <%= f.radio_button(:coffee, "Rock-a-billy") %>
+            </div>
+            <%= image_tag("IMG_ROCK.png") %>
+          </div>
+        </label>
+      </div>
+      <div class="large-5 columns">
+        <label class="panel round_box darken">
+          <div class="center_me">
+            <div class="other_circle green_back">
+              <%= @oro %>
+            </div>
+            <div class="coffee_text brown_text">
+              Cafe Oro <%= f.radio_button(:coffee, "Oro-Espresso") %>
+            </div>
+            <%= image_tag("IMG_ORO.png") %>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+<% end %>
